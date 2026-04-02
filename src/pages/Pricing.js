@@ -68,14 +68,16 @@ function PricingCard({ plan }) {
       >
         {/* FRONT — English */}
         <div
-          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            padding: "clamp(1.5rem, 3vw, 2rem)",
+          }}
           className={`absolute inset-0 rounded-3xl flex flex-col border transition-all duration-300 ${
             plan.highlight
               ? "bg-white text-black border-white shadow-2xl shadow-white/10"
               : "bg-transparent text-white border-white/10"
           }`}
-          style2={{}}
-          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", padding: "clamp(1.5rem, 3vw, 2rem)" }}
         >
           {plan.badge && (
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full border border-white/20 whitespace-nowrap">
